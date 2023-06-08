@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kitewatermelon/F.POKE/issues"
   },
-  "homepage": "https://github.com/kitewatermelon/F.POKE#readme"
+  "homepage": "https://github.com/kitewatermelon/F.POKE#readme",
+  "dependencies": {
+    "pokemon": "^2.3.5"
+  }
 }
