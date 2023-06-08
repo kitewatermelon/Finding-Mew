@@ -1,6 +1,6 @@
 
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=TOONDER&fontSize=90" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=POKEPOKE&fontSize=90" />
 
 # PKNU Wew Programming 21 Park.YS's Final Project
 
