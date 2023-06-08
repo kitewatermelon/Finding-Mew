@@ -7,12 +7,17 @@
 <br>
 
 ## <strong>목차</strong>
-- [Member](#member)
+- [Introduction](#introduction)
 - [Tech](#tech)
 - [Function](#function)
+ 
+ 
+ 수행 과정 및
+수행내용, 수행 결과 및 목표 달성 정도, 고찰(아쉬운 점) 등
 
-## <strong>Member</strong>
-- PKNU 21' 박연수 (FE/BE)
+
+## <strong>Introduction</strong>
+- 포켓몬 스티커를 가지고 싶어도 포켓몬 빵을 살 돈이 없어 가지지 못한 자들을 위한 포켓몬 빵
 
 
 ## <strong>Tech</strong>
