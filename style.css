@@ -58,11 +58,10 @@ section{
     flex-direction: column;
 }
 .textBox{
-    display: flex;
     width: 300px;
     border: 5px double black;
     border-radius: 5px;
-    position: relative; /* 부모 요소에 position: relative; 설정 */
+    position: relative;
 }
 .textBox p{
     padding: 10px;
@@ -103,3 +102,50 @@ section{
     width: 100%;
 }
 /*</bread.html>*/
+/*<sticker.html>*/
+.sticker{
+    margin-right: auto;
+    margin-left: auto;
+    width: 380px;
+    height: 500px;
+    position: relative;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px 5px gray;
+}
+
+.sticker div{
+    display: flex;
+    height:30px;
+    border: 1px solid black;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+#poke_no{
+    width: 60px;
+    position: absolute;
+    top:20px;
+    left:20px;
+}
+#poke_img{
+    width: 300px;
+    height: 300px;
+    margin-top:100px;
+    margin-left:40px;
+}
+#poke_name{
+    width: 110px;
+    justify-content:end;
+    padding-right: 40px;
+    position: absolute;
+    top:20px;
+    left:20px;
+}
+#poke_label{
+    width: 150px;
+    position: absolute;
+    bottom:20px;
+    right:20px;
+}
+/*</sticker.html>*/
