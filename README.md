@@ -32,12 +32,18 @@
 
 - ### BackEnd
 <div>
+ 
 ### 아직 안정해짐  
   <img src="https://img.shields.io/badge/java-007396?style=flat-square&logo=java&logoColor=white"/>
   <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=Spring&logoColor=white"/>
   <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=Postman&logoColor=white"/>
 </div>
 
+- ### Install
+```
+npm install pokemon
+```
+- 포켓몬 이름을 한국어로 표현하기 위한 매개체 역할
 ## <strong>Function</strong>
 
 
