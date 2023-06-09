@@ -166,13 +166,13 @@ section{
 }
 
 .gray {
-    margin-top:200px;
     display: flex;
     flex-direction: column;
 }
 .graytop {
+    margin-right:40px;
     width: 400px;
-    height: 120px;
+    height: 100px;
     background-color: gray;
     border: 2px solid black;
     border-bottom: none;
