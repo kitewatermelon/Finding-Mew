@@ -11,20 +11,18 @@
 
 /*<main.html>*/
 
-#mainPage{
+.mainPage{
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-#mainBtnSet{
+.mainBtnSet{
     display: flex;
     flex-direction: column;
 }
-#mainPage button{
+.mainPage button{
     margin-top: 10px;
     font-size: 40px;
     text-align: center;
@@ -32,16 +30,16 @@
     height: 150px;
     border: 5px solid black;
 }
+.mainPage button:hover{
+    font-size: 60px;
+}
 
-#mainStartbtn{
+.mainStartbtn{
     border-top-left-radius : 150px;
     border-top-right-radius : 150px;
     background-color: red;
 }
-#mainPage button:hover{
-    font-size: 60px;
-}
-#mainHelpbtn{
+.mainHelpbtn{
     border-bottom-left-radius : 150px;
     border-bottom-right-radius : 150px;
     background-color: white;
@@ -103,14 +101,32 @@ section{
 }
 /*</bread.html>*/
 /*<sticker.html>*/
+.sandb {
+    display: flex;
+    justify-content: center; /* 요소를 가로로 중앙 정렬 */
+    align-items: center; /* 요소를 세로로 중앙 정렬 */
+  }
+
+
+.sandb button{
+    margin-top: 10px;
+    font-size: 40px;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    border: 5px solid black;
+}
+.sandb button:hover{
+    font-size: 60px;
+}
+
 .sticker{
-    margin-right: auto;
-    margin-left: auto;
     width: 380px;
     height: 500px;
     position: relative;
     border: 1px solid black;
     box-shadow: 5px 5px 5px 5px gray;
+    margin-right: 60px;
 }
 
 .sticker div{
@@ -147,5 +163,26 @@ section{
     position: absolute;
     bottom:20px;
     right:20px;
+}
+
+.gray {
+    margin-top:200px;
+    display: flex;
+    flex-direction: column;
+}
+.graytop {
+    width: 400px;
+    height: 120px;
+    background-color: gray;
+    border: 2px solid black;
+    border-bottom: none;
+    transition: transform 1s; /* 회전 애니메이션을 위한 트랜지션 설정 */
+    transform-origin: bottom right; /* 우측 하단을 기준으로 회전 */
+}
+.graybot {
+    width: 400px;
+    height: 400px;
+    background-color: gray;
+    border: 2px solid black;
 }
 /*</sticker.html>*/

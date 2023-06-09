@@ -6,23 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>내 페이지</title>
     <link rel="stylesheet" href="../style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var grayTop = document.querySelector('.graytop');
+            var grayBot = document.querySelector('.graybot');
+            grayTop.addEventListener('click', function() {
+                this.style.transform = 'rotate(60deg)';
+                setTimeout(function() {
+                    window.location.href = 'sticker2.html';
+                }, 1000); // 0.5초 후에 sticker2.html로 이동
+            });
+            grayBot.addEventListener('click', function() {
+                grayTop.style.transform = 'rotate(60deg)';
+                setTimeout(function() {
+                    window.location.href = 'sticker2.html';
+                }, 1000); // 0.5초 후에 sticker2.html로 이동
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
         <img src="../src/logo.png" style="width: 255px;height: 112px;" onclick="location.href='main.html'">
     </header>
 
-    <div class="sticker">
-        <div id="poke_no">
-            <p>no.</p>
+    <dic class="sandb">
+        <div gray>
+            <div class="graytop"></div>
+            <div class="graybot"></div>
         </div>
-        <div id="poke_name">
-            <p>name</p>
-        </div>
-        <div id="poke_img">
-        </div>
-        <div id="poke_label">
-            <p>@Pokémon</p>
+        <div class="textBox">
+            <p>클릭하여 스티커(을)를 해제하세요!</p>
+            <p style="position:absolute;bottom:0px;right:0px">▼</p>
         </div>
     </div>
 </body>
