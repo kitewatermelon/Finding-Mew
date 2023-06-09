@@ -6,9 +6,9 @@ pokemon.all();
 console.log(pokemon.random('ko'));
 //=> 'Snorlax'
 
-pokemon.getName(147);
+console.log(pokemon.getName(100 , 'ko'));
 //=> 'Dratini'
 
-pokemon.getId('Dratini');
+console.log(pokemon.getId('Dratini'));
 //=> 147
 

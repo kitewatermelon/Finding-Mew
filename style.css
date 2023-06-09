@@ -1,0 +1,105 @@
+@font-face {
+    font-family: "DungGeunMo";
+    src: url('./src/fonts/DungGeunMo.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "DungGeunMo", sans-serif;
+}
+
+/*<main.html>*/
+
+#mainPage{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#mainBtnSet{
+    display: flex;
+    flex-direction: column;
+}
+#mainPage button{
+    margin-top: 10px;
+    font-size: 40px;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    border: 5px solid black;
+}
+
+#mainStartbtn{
+    border-top-left-radius : 150px;
+    border-top-right-radius : 150px;
+    background-color: red;
+}
+#mainPage button:hover{
+    font-size: 60px;
+}
+#mainHelpbtn{
+    border-bottom-left-radius : 150px;
+    border-bottom-right-radius : 150px;
+    background-color: white;
+}
+/*</main.html>*/
+
+/*<help.html>*/
+section{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.textBox{
+    display: flex;
+    width: 300px;
+    border: 5px double black;
+    border-radius: 5px;
+    position: relative; /* 부모 요소에 position: relative; 설정 */
+}
+.textBox p{
+    padding: 10px;
+}
+
+/*</help.html>*/
+
+/*<bread.html>*/
+
+.main-bread{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.main-bread li{
+    list-style: none;
+}
+.bread-list::after{
+    content: "";
+    display: block;
+    clear:both;
+}
+
+.bread-list__item {
+    float: left;
+    margin-right: 80px;
+    margin-bottom: 40px;
+}
+
+.bread-list__item:nth-child(3n){
+    margin-right: 0;
+}
+
+.bread-list__item img{
+    display: block;
+    width: 100%;
+}
+/*</bread.html>*/
