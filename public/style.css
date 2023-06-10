@@ -1,0 +1,283 @@
+/*<공통 사용 요소>*/
+
+@font-face {
+    font-family: "DungGeunMo";
+    src: url('/src/fonts/DungGeunMo.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "DungGeunMo", sans-serif;
+    font-weight: bold;
+}
+
+/*텍스트 박스*/
+.textBox{
+    background-color: white;
+
+    width: 300px;
+    border: 5px double black;
+    border-radius: 5px;
+    position: relative;
+}
+
+.textBox p{
+    padding: 10px;
+}
+
+/*몬스터볼 모양 버튼(앞에 main이라고 붙혔으나 global하게 사용됨)*/
+.mainStartbtn{
+    border-top-left-radius : 150px;
+    border-top-right-radius : 150px;
+    background-color: red;
+}
+
+.mainHelpbtn{
+    border-bottom-left-radius : 150px;
+    border-bottom-right-radius : 150px;
+    background-color: white;
+}
+/*</공통 사용 요소>*/
+
+/*<main>*/
+
+.mainPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainBtnSet{
+    display: flex;
+    flex-direction: column;
+}
+
+.mainPage button{
+    margin-top: 10px;
+    font-size: 40px;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    border: 5px solid black;
+}
+
+.mainPage button:hover{
+    font-size: 60px;
+}
+
+
+/*</main>*/
+
+/*<help>*/
+section{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/*</help>*/
+
+/*<bread>*/
+
+.main-bread{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.main-bread li{
+    list-style: none;
+}
+
+.bread-list{
+    margin-top: 30px;
+}
+
+.bread-list::after{
+    content: "";
+    display: block;
+    clear:both;
+}
+
+.bread-list__item {
+    float: left;
+    margin-right: 200px;
+    margin-bottom: 40px;
+}
+
+.bread-list__item:hover{
+    transform:scale(1.2);
+}
+
+/*이렇게 해주는 이유는 나중에 모바일 기기 반응형으로 만들때 2n으로 처리하기 위해서*/
+.bread-list__item:nth-child(3n){
+    margin-right: 0;
+}
+
+.bread-list__item img{
+    display: block;
+    width: 100%;
+}
+/*</bread>*/
+
+/*<package>*/
+/*<sticker>*/
+
+/*스티커와 버튼이라서 's'and'b'*/
+.sandb {
+    display: flex;
+    justify-content: center; /* 요소를 가로로 중앙 정렬 */
+    align-items: center; /* 요소를 세로로 중앙 정렬 */
+  }
+
+.sandb button{
+    margin-top: 10px;
+    font-size: 40px;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    border: 5px solid black;
+}
+
+.sandb button:hover{
+    font-size: 60px;
+}
+
+/*스티커 css 사이즈 여기서 조절함*/
+.sticker{
+    width: 380px;
+    height: 500px;
+    position: relative;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px 5px gray;
+    margin-right: 60px;
+    background-color: white;
+}
+/*스티커 내의 모든 css*/
+.sticker div{
+    display: flex;
+    height:30px;
+    border: 1px solid black;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+}
+/*poke no. css*/
+#poke_no{
+    width: 60px;
+    position: absolute;
+    top:20px;
+    left:20px;
+}
+/*poke img css 지금은 border보이게 했는데 추후에 border:none해서 사진 지울 것*/
+#poke_img{
+    width: 300px;
+    height: 300px;
+    margin-top:100px;
+    margin-left:40px;
+}
+/*poke name css*/
+#poke_name{
+    width: 130px;
+    justify-content:end;
+    padding-right: 20px;
+    position: absolute;
+    top:20px;
+    right:60px;
+    left:20px;
+}
+/*poke label css*/
+#poke_label{
+    width: 150px;
+    position: absolute;
+    bottom:20px;
+    right:20px;
+}
+
+
+/*gray는 포장지가 회색이라 그레이라고 이름 지어줌 추후에 shield로 변경해야 함*/
+.gray {
+    display: flex;
+    flex-direction: column;
+}
+/*포장지 윗부분*/
+.graytop {
+    margin-right:40px;
+    width: 400px;
+    height: 100px;
+    background-color: gray;
+    border: 2px solid black;
+    border-bottom: none;
+    transition: transform 1s; /* 회전 애니메이션을 위한 트랜지션 설정 */
+    transform-origin: bottom right; /* 우측 하단을 기준으로 회전 */
+}
+/*포장지 아랫부분*/
+.graybot {
+    width: 400px;
+    height: 400px;
+    background-color: gray;
+    border: 2px solid black;
+}
+/*</sticker.html>*/
+/*</package.html>*/
+
+.dexBody{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+nav{
+    width: 30%;
+}
+
+.dexSticker{
+    width: 380px;
+    height: 500px;
+    position: relative;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px 5px gray;
+    margin-right: 20px;
+    transform: scale(0.3);
+}
+/*스티커 내의 모든 css*/
+.dexSticker div{
+    display: flex;
+    height:30px;
+    border: 1px solid black;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+}
+/*poke no. css*/
+#dex_no{
+    width: 60px;
+    position: absolute;
+    top:20px;
+    left:20px;
+}
+/*poke img css 지금은 border보이게 했는데 추후에 border:none해서 사진 지울 것*/
+#dex_img{
+    width: 300px;
+    height: 300px;
+    margin-top:100px;
+    margin-left:40px;
+}
+/*poke name css*/
+#dex_name{
+    width: 110px;
+    justify-content:end;
+    padding-right: 40px;
+    position: absolute;
+    top:20px;
+    left:20px;
+}
