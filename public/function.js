@@ -26,3 +26,4 @@ setInterval(function() {
 setInterval(function() {
     arrow.innerText = '▼';
 }, 1000); // 0.5초마다 내용을 ▽로 변경
+

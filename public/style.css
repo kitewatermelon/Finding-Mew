@@ -184,16 +184,19 @@ section{
     height: 300px;
     margin-top:100px;
     margin-left:40px;
+    border:none ;
 }
 /*poke name css*/
 #poke_name{
-    width: 130px;
-    justify-content:end;
-    padding-right: 20px;
+
+    width: fit-content;
+    padding-left: 70px;
+    padding-right: 10px;
+    justify-content: end;
     position: absolute;
-    top:20px;
-    right:60px;
-    left:20px;
+    top: 20px;
+    right: 60px;
+    left: 20px;
 }
 /*poke label css*/
 #poke_label{
