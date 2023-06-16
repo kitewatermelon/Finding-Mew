@@ -48,28 +48,28 @@ npm install pokemon
 ```
 - 포켓몬 이름을 한국어로 표현하기 위한 매개체 역할
 ## <strong>Structure</strong>
-📦public
- ┣ 📂src
- ┃ ┣ 📂fonts
- ┃ ┃ ┣ 📜DungGeunMo.ttf
- ┃ ┃ ┣ 📜PokemonGSK2Mono.ttf
- ┃ ┃ ┗ 📜PokemonGSK2Mono.woff
- ┃ ┣ 📜logo.png
- ┃ ┣ 📜꼬부기.jpg
- ┃ ┣ 📜꼬부기빵.jpg
- ┃ ┣ 📜냐오하빵.jpg
- ┃ ┣ 📜로켓단빵.jpg
- ┃ ┣ 📜메타몽빵.jpg
- ┃ ┣ 📜오박사.jpg
- ┃ ┣ 📜이브이빵.jpg
- ┃ ┣ 📜파이리빵.jpg
- ┃ ┗ 📜피카츄빵.jpg
- ┣ 📜function.js // 기능 구현용
- ┗ 📜style.css // 디자인용
-📦views
- ┣ 📜bread.ejs // 빵 선택
- ┣ 📜help.ejs // 도움말 
- ┣ 📜main.ejs // 메인 화면
- ┣ 📜package.ejs // 스티커 포장지 
- ┣ 📜pokedex.ejs // 포켓몬 도감
- ┗ 📜sticker.ejs // 스티커 반환
+📦public  
+ ┣ 📂src  
+ ┃ ┣ 📂fonts  
+ ┃ ┃ ┣ 📜DungGeunMo.ttf  
+ ┃ ┃ ┣ 📜PokemonGSK2Mono.ttf  
+ ┃ ┃ ┗ 📜PokemonGSK2Mono.woff  
+ ┃ ┣ 📜logo.png  
+ ┃ ┣ 📜꼬부기.jpg  
+ ┃ ┣ 📜꼬부기빵.jpg  
+ ┃ ┣ 📜냐오하빵.jpg  
+ ┃ ┣ 📜로켓단빵.jpg  
+ ┃ ┣ 📜메타몽빵.jpg  
+ ┃ ┣ 📜오박사.jpg  
+ ┃ ┣ 📜이브이빵.jpg  
+ ┃ ┣ 📜파이리빵.jpg  
+ ┃ ┗ 📜피카츄빵.jpg  
+ ┣ 📜function.js // 기능 구현용  
+ ┗ 📜style.css // 디자인용  
+📦views  
+ ┣ 📜bread.ejs // 빵 선택  
+ ┣ 📜help.ejs // 도움말   
+ ┣ 📜main.ejs // 메인 화면  
+ ┣ 📜package.ejs // 스티커 포장지   
+ ┣ 📜pokedex.ejs // 포켓몬 도감  
+ ┗ 📜sticker.ejs // 스티커 반환  
