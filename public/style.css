@@ -1,9 +1,10 @@
 /*<공통 사용 요소>*/
-
 @font-face {
     font-family: "DungGeunMo";
     src: url('/src/fonts/DungGeunMo.ttf') format('truetype');
 }
+
+
 
 *{
     margin: 0;
@@ -11,6 +12,11 @@
     font-family: "DungGeunMo", sans-serif;
     font-weight: bold;
 }
+
+button:hover{
+    color:gray;
+}
+
 
 /*텍스트 박스*/
 .textBox{
@@ -61,10 +67,6 @@
     width: 300px;
     height: 150px;
     border: 5px solid black;
-}
-
-.mainPage button:hover{
-    font-size: 60px;
 }
 
 
@@ -140,7 +142,6 @@ section{
   }
 
 .sandb button{
-    margin-top: 10px;
     font-size: 40px;
     text-align: center;
     width: 300px;
@@ -148,9 +149,6 @@ section{
     border: 5px solid black;
 }
 
-.sandb button:hover{
-    font-size: 60px;
-}
 
 /*스티커 css 사이즈 여기서 조절함*/
 .sticker{
@@ -172,22 +170,29 @@ section{
     justify-content: center;
 }
 /*poke no. css*/
-#poke_no{
+#poke_no ,.poke_no  {
     width: 60px;
     position: absolute;
     top:20px;
     left:20px;
 }
 /*poke img css 지금은 border보이게 했는데 추후에 border:none해서 사진 지울 것*/
-#poke_img{
+#poke_img {
     width: 300px;
     height: 300px;
     margin-top:100px;
     margin-left:40px;
-    border:none ;
+    border: none ;
+}
+.poke_img{
+    width: 300px;
+    height: 300px;
+    margin-top:200px;
+    margin-left:40px;
+    border: none !important;
 }
 /*poke name css*/
-#poke_name{
+#poke_name ,.poke_name{
     width: fit-content;
     padding-left: 70px;
     padding-right: 10px;
@@ -198,7 +203,7 @@ section{
     left: 20px;
 }
 /*poke label css*/
-#poke_label{
+#poke_label , .poke_label {
     width: 150px;
     position: absolute;
     bottom:20px;
@@ -231,3 +236,137 @@ section{
 }
 /*</sticker.html>*/
 /*</package.html>*/
+
+
+/*<pokedex.html>*/
+
+.pokedexPage{
+    display: flex;
+    align-items: center;
+}
+
+.pokedexBtnSet{
+    display: flex;
+    flex-direction: column;
+}
+
+.pokedexPage button{
+    margin-top: 5px;
+    font-size: 20px;
+    text-align: center;
+    width: 150px;
+    height: 75px;
+    border: 2.5px solid black;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 200px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+
+.cards-container {
+    transition: margin-right 0.3s;
+}
+
+/*</pokedex.html>*/
+
+
+.orderInput{
+    width: 71px !important;
+    font-size: 15px !important;
+    border-bottom-left-radius : 142px;
+    background-color: white;
+}
+
+
+.orderId{
+    width: 71px !important;
+    font-size: 15px !important;
+    border-bottom-right-radius : 142px;
+    background-color: white;
+    margin-right: 30px;
+}
+
+.detail {
+    position: fixed;
+    margin: 0 auto;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    padding: 10px;
+    margin-top: 150px;
+}
+
+@media only screen and (max-width: 480px) {
+    #logoImg {
+        scale: 0.75;
+    }
+
+    .sticker {
+        width: 380px;
+        height: 500px;
+        position: relative;
+        border: 1px solid black;
+        box-shadow: 5px 5px 5px 5px gray;
+        margin: 10px auto;
+        background-color: white;
+    }
+
+    .sandb {
+        display: flex;
+        justify-content: center;
+        /* 요소를 가로로 중앙 정렬 */
+        align-items: center;
+        /* 요소를 세로로 중앙 정렬 */
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .main-bread {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .bread-list {
+        margin: 0 auto;
+    }
+
+    .bread-list::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .bread-list__item {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .bread-list__item:nth-child(6) {
+        margin-bottom: 100px;
+    }
+
+    .graytop {
+        margin: 0 auto;
+    }
+
+    .textBox {
+        margin: 10px 0;
+    }
+}

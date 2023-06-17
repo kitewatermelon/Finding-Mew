@@ -41,6 +41,9 @@ const pokeId = document.getElementById('poke_no');
 const pokeName = document.getElementById('poke_name');
 const pokeImg = document.getElementById('poke_img');
 const txtName = document.getElementById('txt_name');
+let storedArray = JSON.parse(localStorage.getItem('pokedex')) || [];
+let cardsContainer = document.getElementById('cards');
+let detailContainer = document.getElementById('detail');
 
 function pushPokemon(key , obj) {
     let tempArr = JSON.parse(localStorage.getItem(key)) || [];
@@ -101,3 +104,77 @@ const getPokemonData = async () => {
 
 getPokemonData();
 
+
+
+
+function displayCards(order) {
+    // Clear the existing cards
+    cardsContainer.innerHTML = '';
+
+    // Sort the storedArray based on the chosen order
+    let sortedArray;
+    if (order === 'input') {
+        sortedArray = storedArray.slice(); // Copy the array to maintain the original order
+    } else if (order === 'ascending') {
+        sortedArray = storedArray.slice().sort((a, b) => a.id - b.id);
+    }
+
+    // Display the sortedArray cards
+    sortedArray.forEach(obj => {
+        let card = document.createElement('div');
+        card.className = 'card';
+        if (obj.color) {
+            card.style.backgroundColor = obj.color;
+        }
+        let container = document.createElement('div');
+        container.className = 'container';
+        Object.keys(obj).forEach(key => {
+            if (key === 'image') {
+                let img = document.createElement('img');
+                img.src = obj[key];
+                img.style.width = '100%';
+                container.appendChild(img);
+            }
+        });
+        card.appendChild(container);
+        card.addEventListener('click', () => {
+            detailContainer.innerHTML = '';
+
+            let stickerContainer = document.createElement('div');
+            stickerContainer.className = 'sticker';
+
+            let pokeNoContainer = document.createElement('div');
+            pokeNoContainer.className = 'poke_no';
+            pokeNoContainer.innerHTML = `<p>no.${obj.id}</p>`;
+            pokeNoContainer.style.backgroundColor = obj.color;
+            stickerContainer.appendChild(pokeNoContainer);
+
+            let pokeNameContainer = document.createElement('div');
+            pokeNameContainer.className = 'poke_name';
+            pokeNameContainer.innerHTML = `<p>${obj.name}</p>`;
+            stickerContainer.appendChild(pokeNameContainer);
+
+            let pokeImgContainer = document.createElement('div');
+            pokeImgContainer.className = 'poke_img';
+            let img = document.createElement('img');
+            img.src = obj.image;
+            img.style.width = '100%';
+            pokeImgContainer.appendChild(img);
+            stickerContainer.appendChild(pokeImgContainer);
+
+            let pokeLabelContainer = document.createElement('div');
+            pokeLabelContainer.className = 'poke_label';
+            pokeLabelContainer.innerHTML = '<p>@Pokémon</p>';
+            stickerContainer.appendChild(pokeLabelContainer);
+
+            detailContainer.appendChild(stickerContainer);
+
+            detailContainer.style.display = 'block';
+            cardsContainer.classList.add('detail-visible');
+        });
+        cardsContainer.appendChild(card);
+    });
+}
+
+// Initial display (by input order)
+displayCards('input');
