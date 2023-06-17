@@ -22,7 +22,6 @@ app.get('/bread', function(req, res) {
   res.render('bread');
 });
 
-
 app.get('/package', function(req, res) {
   res.render('package');
 });
@@ -31,9 +30,9 @@ app.get('/sticker', function(req, res) {
   res.render('sticker');
 });
 
-
 app.get('/pokedex', function(req, res) {
   res.render('pokedex');
 });
+
 app.listen(3000);
 console.log('Server is listening on port 3000');

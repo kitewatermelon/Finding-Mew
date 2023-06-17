@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>내 페이지</title>
+    <title>뮤를 찾아서..</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -37,64 +37,5 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/function.js"></script>
-    <script>
-                // pokeAPI에서 데이터 가져오기
-                const getPokemonData = async () => {
-            try {
-                const response = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${pokemonId}/`);
-                const data = response.data;
-                console.log(data);
-                pokeId.innerHTML = `<p>no. ${data.id}</p>`;
-                pokeName.innerHTML = `<p>${data.names.find(name => name.language.name === 'ko').name}</p>`;
-                txtName.innerHTML = `<p>축하합니다. ${data.names.find(name => name.language.name === 'ko').name}을(를) 획득했습니다!</p>`;
-
-                // 이미지 요소 생성 및 설정
-                const img = document.createElement('img');
-                if (pokemonId >= 100)
-                    img.src = `https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/0${pokemonId}01.png`;
-                else if (pokemonId >= 10)
-                    img.src = `https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/00${pokemonId}01.png`;
-                else
-                    img.src = `https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000${pokemonId}01.png`;
-
-                img.alt = 'Pokemon Image does not loaded';
-                img.style.width = "300px";
-                img.style.height = "300px";
-
-
-                // 이미지를 pokeImg에 추가
-                pokeImg.appendChild(img);
-
-                if(data.color.name == "black"){
-                    pokeId.style.color = "white";
-                }
-
-                document.body.style.backgroundColor = data.color.name;
-                pokeId.style.backgroundColor = data.color.name;
-
-            } catch (error) {
-                console.error(error);
-            }
-        };
-
-
-        //random한 포켓몬 아이디 생성
-        const getRandomNumber = () => {
-        const min = 1;
-        const max = 151;
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-        };
-
-        const pokemonId = getRandomNumber();
-
-        // 가져온 데이터를 HTML에 삽입하기
-        const pokeId = document.getElementById('poke_no');
-        const pokeName = document.getElementById('poke_name');
-        const pokeImg = document.getElementById('poke_img');
-        const txtName = document.getElementById('txt_name');
-
-        getPokemonData();
-
-    </script>
 </body>
 </html>

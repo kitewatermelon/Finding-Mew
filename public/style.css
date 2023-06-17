@@ -188,7 +188,6 @@ section{
 }
 /*poke name css*/
 #poke_name{
-
     width: fit-content;
     padding-left: 70px;
     padding-right: 10px;
@@ -232,55 +231,3 @@ section{
 }
 /*</sticker.html>*/
 /*</package.html>*/
-
-.dexBody{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-nav{
-    width: 30%;
-}
-
-.dexSticker{
-    width: 380px;
-    height: 500px;
-    position: relative;
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px 5px gray;
-    margin-right: 20px;
-    transform: scale(0.3);
-}
-/*스티커 내의 모든 css*/
-.dexSticker div{
-    display: flex;
-    height:30px;
-    border: 1px solid black;
-    border-radius: 15px;
-    align-items: center;
-    justify-content: center;
-}
-/*poke no. css*/
-#dex_no{
-    width: 60px;
-    position: absolute;
-    top:20px;
-    left:20px;
-}
-/*poke img css 지금은 border보이게 했는데 추후에 border:none해서 사진 지울 것*/
-#dex_img{
-    width: 300px;
-    height: 300px;
-    margin-top:100px;
-    margin-left:40px;
-}
-/*poke name css*/
-#dex_name{
-    width: 110px;
-    justify-content:end;
-    padding-right: 40px;
-    position: absolute;
-    top:20px;
-    left:20px;
-}
