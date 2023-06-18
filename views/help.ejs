@@ -41,8 +41,19 @@
             <li>모바일 규격에 맞는 반응형 웹 구현</li>
             <li>관동지방(#1~#151)까지의 포켓몬 구현</li>
         </ul>
+        <button onclick="clearLocalStorage()">도감 초기화</button>
+
     </section>
     <script src="/function.js"></script>
+    <script>
+        function clearLocalStorage() {
+            let sure = confirm("정말 도감을 초기화하겠습니까? 한번 초기화된 도감은 복구되지 않습니다.")
 
+            if(sure){
+                localStorage.clear() ;
+                alert("도감이 초기화되었습니다.");
+            }
+        }
+    </script>
 </body>
 </html>

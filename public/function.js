@@ -41,6 +41,9 @@ const pokeId = document.getElementById('poke_no');
 const pokeName = document.getElementById('poke_name');
 const pokeImg = document.getElementById('poke_img');
 const txtName = document.getElementById('txt_name');
+let pokeCards = document.getElementById("cards");
+let pokeDetail = document.getElementById("detail");
+
 let storedArray = JSON.parse(localStorage.getItem('pokedex')) || [];
 let cardsContainer = document.getElementById('cards');
 let detailContainer = document.getElementById('detail');
@@ -105,6 +108,11 @@ const getPokemonData = async () => {
 getPokemonData();
 
 
+if (pokeCards.childElementCount <= 0) {
+    var noStickersMessage = document.createElement("p");
+    noStickersMessage.textContent = "아직 스티커를 가지고 있지 않습니다.";
+    pokeCards.appendChild(noStickersMessage);
+}
 
 
 function displayCards(order) {
@@ -178,3 +186,9 @@ function displayCards(order) {
 
 // Initial display (by input order)
 displayCards('input');
+
+var detailElement = document.getElementById("detail");
+
+detailElement.addEventListener("click", function() {
+  detailElement.style.display = "none";
+});
