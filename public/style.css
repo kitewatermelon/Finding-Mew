@@ -300,7 +300,7 @@ section{
 }
 
 
-@media all and (min-device-width:769){
+@media all and (min-device-width:769px){
     .detail {
         width: calc(25% - 20px);
         position: fixed;
@@ -317,7 +317,7 @@ section{
         margin-right: calc(25% + 20px);
     }
 }
-@media all and (max-device-width: 768) {
+@media all and (max-device-width: 768px) {
     #logoImg {
         scale: 0.5;
     }
