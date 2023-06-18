@@ -29,7 +29,7 @@ setInterval(function() {
 
 //random한 포켓몬 아이디 생성
 const getRandomNumber = () => {
-    const min = 1;
+    let min = 1;
     const max = 151;
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
@@ -74,8 +74,10 @@ const getPokemonData = async () => {
             img.src = `https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/0${pokemonId}01.png`;
         else if (pokemonId >= 10)
             img.src = `https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/00${pokemonId}01.png`;
-        else
+        else if (pokemonId < 10)
             img.src = `https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000${pokemonId}01.png`;
+        if (pokemonId == 131)
+            img.src = `https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/013103.png`;
 
         let tempPackage = { id    : data.id ,
                               name  : data.names.find(name => name.language.name === 'ko').name ,
