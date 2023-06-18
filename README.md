@@ -42,11 +42,6 @@
  <img src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white">
 </div>
 
-- ### Install
-```
-npm install pokemon
-```
-- 포켓몬 이름을 한국어로 표현하기 위한 매개체 역할
 ## <strong>Structure</strong>
 📦public  
  ┣ 📂src  
