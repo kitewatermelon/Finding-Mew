@@ -4,6 +4,7 @@
 
 # PKNU Wew Programming 21 Park.YS's Final Project
 https://port-0-pokemonsticker-7xwyjq992llilgf6fv.sel4.cloudtype.app
+(now it's closed)
 <br>
 
 ## <strong>목차</strong>
